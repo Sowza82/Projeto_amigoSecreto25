@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Adicionando a CDN do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3Y9zq4Fh2ST9tj5aSPp4c4g9CJseBnsH4HFlcWOVz0zfffbRfm6e2qFtf" crossorigin="anonymous">
+    <title>Amigo Secreto</title>
+</head>
+
+<body>
+    <!-- Container principal para os confetes -->
+    <div id="confetes-container"></div> <!-- Container para os confetes, será gerado dinamicamente via JS -->
+
+    <main class="main-content">
+        <header class="header-banner text-center">
+            <h1 class="main-title display-4">Amigo Secreto</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto" class="img-fluid">
+        </header>
+        
+        <section class="input-section">
+            <h2 class="section-title h3 mb-4">Digite o nome dos seus amigos</h2>
+            <div class="input-wrapper d-flex justify-content-center mb-4">
+                <input type="text" id="amigo" class="input-name form-control w-75 p-3" placeholder="Digite um nome">
+                <button class="button-add btn btn-primary ms-3" onclick="adicionarAmigo()">Adicionar</button>
+            </div>
+           
+            <ul id="listaAmigos" class="name-list list-unstyled text-center mb-4"></ul>
+            <ul id="resultado" class="result-list text-center mb-4" aria-live="polite"></ul>
+
+            <div class="button-container text-center">
+                <button class="button-draw btn btn-success" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                    Sortear amigo
+                </button>
+            </div>
+
+            <!-- Botões Resetar inicialmente ocultos -->
+            <div class="button-container text-center" id="reset-container" style="display: none;">
+                <button class="button-reset btn btn-danger" onclick="resetarLista()">Resetar lista</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+    <!-- Adicionando a CDN do Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0JtLQjmReKavLOf3+HA5yXQVu1NjDKc0d2w8eUQfOwAkTnpG" crossorigin="anonymous"></script>
+    <footer class="text-center mt-5">
+        <p>Desenvolvido por: Tatiane Souza</p>
+    </footer>
+</body>
+</html>
