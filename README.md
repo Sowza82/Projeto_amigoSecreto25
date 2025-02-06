@@ -34,9 +34,4 @@
 └── 📄 README.md       # Documentação do projeto  
 ```
 
-## 📌 Melhorias Futuras
-```diff
-- Melhorar a acessibilidade do site  
-- Adicionar opção para exportar o sorteio em PDF  
-- Implementar um sistema de envio automático por e-mail  
-```
+
